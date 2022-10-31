@@ -1,0 +1,23 @@
+{
+    "name": "migueldelaconcha/sdkphp",
+    "type": "library",
+    "require": {
+        "php": "^7.0.0|^7.2.5|^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "ext-openssl": "*",
+        "ext-json": "*",
+        "phpseclib/mcrypt_compat": "^2.0",
+        "phpseclib/phpseclib": "^3.0",
+        "symfony/serializer": "^5.4",
+        "symfony/property-access": "^5.4",
+        "doctrine/annotations": "^1.13"
+    },  
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+      "psr-4": {
+        "MIT\\SdkClient\\": "src"
+      }
+    }
+}
