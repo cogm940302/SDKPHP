@@ -24,7 +24,6 @@ Doctrine
 
 ```php
 ...
-use MIT\SdkClient\AES\AesHelper;
 use MIT\SdkClient\Models\UrlData;
 use MIT\SdkClient\Models\PaymentData;
 use MIT\SdkClient\Models\DatosAdicionalesData;
