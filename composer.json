@@ -1,5 +1,5 @@
 {
-    "name": "migueldelaconcha/sdkphp",
+    "name": "mit/sdkphp",
     "type": "library",
     "require": {
         "php": "^7.0.0|^7.2.5|^8.0",

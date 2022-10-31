@@ -47,9 +47,7 @@ class AesHelper
 
         $newData = base64_decode($data);
         $iv = substr($newData, 0, self::CBC_LENGTH_IV);
-        print('el iv es: ' . base64_encode($iv));
         $dataRaw = substr($newData, self::CBC_LENGTH_IV, strlen($newData));
-        print('el dataRaw es: ' . base64_encode($dataRaw));
         try {
             return openssl_decrypt($dataRaw, 'aes-128-cbc', $this->key, OPENSSL_RAW_DATA, $iv);
         } catch (\Exception $e) {

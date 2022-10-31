@@ -70,7 +70,6 @@ use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
     {
         $this->validateRequest($payment);
         $xmlContent = $this->buildRequest($payment);
-        print_r('el xml es: ' . $xmlContent);
         $httpHelper = new HttpHelper($this->endpoint);
         $xmlResponse = $httpHelper->post($xmlContent);
         if (!$this->is_base64($xmlResponse))
@@ -106,7 +105,6 @@ use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
     private function validateRequest($payment) {
 
         $businessDataValidator = new BusinessDataValidator();
-        print_r($businessDataValidator);
         $resultBusinessValidator = $businessDataValidator->validate($payment->getBusiness());
         if($resultBusinessValidator != '') {
             throw new SdkException($resultBusinessValidator , -1);
