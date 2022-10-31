@@ -23,6 +23,20 @@ Doctrine
 ## Ejemplo
 
 ```php
+...
+use MIT\SdkClient\AES\AesHelper;
+use MIT\SdkClient\Models\UrlData;
+use MIT\SdkClient\Models\PaymentData;
+use MIT\SdkClient\Models\DatosAdicionalesData;
+use MIT\SdkClient\Models\DataItem;
+use MIT\SdkClient\Models\BusinessData;
+use MIT\SdkClient\WppClient;
+...
+```
+
+```php
+
+
 		$sdk = new WppClient('https://sandboxpo.mit.com.mx/gen', 'SNDBX123', '5DCC67393750523CD165F17E1EFADD21');
         $urlData = new UrlData();
         $urlData->setReference("reference001");
